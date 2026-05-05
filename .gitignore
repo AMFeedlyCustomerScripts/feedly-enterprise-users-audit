@@ -1,0 +1,15 @@
+# Credentials — never commit these
+.env
+config.yaml
+
+# Snapshots contain org data — exclude from version control
+snapshots/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+.venv/

@@ -1,0 +1,34 @@
+# =============================================================================
+# Feedly Enterprise Users Audit - Configuration Template
+# =============================================================================
+#
+# Copy this file to config.yaml and fill in your credentials:
+#
+#   cp config.yaml.template config.yaml
+#
+# IMPORTANT: Never commit config.yaml to version control.
+#            Add it to .gitignore to avoid accidentally exposing your token.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Feedly Configuration
+# -----------------------------------------------------------------------------
+feedly:
+  # Your Feedly Enterprise API access token.
+  # Obtain it from your Feedly account settings or from your Feedly account manager.
+  #
+  # This value is only used if the FEEDLY_API_KEY environment variable is NOT set.
+  # Environment variable always takes priority over this field.
+  api_token: "YOUR_FEEDLY_API_TOKEN_HERE"
+
+# -----------------------------------------------------------------------------
+# Output Configuration
+# -----------------------------------------------------------------------------
+output:
+  # Directory where timestamped JSON snapshots are written.
+  # Each weekly run creates one file, e.g.:
+  #   enterprise_users_20260505_060000.json
+  #
+  # The script automatically compares the new snapshot against the most recent
+  # previous one and prints a change report to stdout.
+  snapshot_dir: "./snapshots"
